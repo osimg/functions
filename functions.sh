@@ -85,5 +85,5 @@ function convert_image {
   make_image_format qcow2 QEMU
   make_image_format vmdk VMWare
   make_image_format vhdx VirtualBox
-  rm -f disk.img || true
+  xz -e9 -T0 disk.img
 }
