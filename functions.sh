@@ -83,7 +83,8 @@ function make_image_format {
 
 function convert_image {
   make_image_format qcow2 QEMU
-  make_image_format vmdk VMWare
-  make_image_format vhdx VirtualBox
+  make_image_format vmdk VMware
+  make_image_format vhdx Hyper-V
+  make_image_format vdi VirtualBox
   xz -e9 -T0 disk.img
 }
